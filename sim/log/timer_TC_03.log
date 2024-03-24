@@ -1,0 +1,89 @@
+# vsim -coverage -do {coverage save -onexit timer_TC_03.ucdb; run -all; exit} -l timer_TC_03.log -c -voptargs=+cover=bcefsx -sv_seed random work.timer_TC_03 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# //  Questa Sim-64
+# //  Version 10.2c Unknown Platform Jul 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.timer_TC_03(fast)
+# Loading work.timer_CPU_Model(fast)
+# Sv_Seed = 3595915762
+# coverage save -onexit timer_TC_03.ucdb 
+#  run -all 
+# Start write to address = 01, data = 10
+# 
+# Write transfer finished
+# 
+# Start read at address = 01
+# 
+# Read transfer finished 
+# 
+##################################################################
+############################ DATA: 10 ############################
+##################################################################
+############################ PADSSED  ############################
+##################################################################
+# 
+# Start read at address = 02
+# 
+# Read transfer finished 
+# 
+##################################################################
+############################ DATA: 01 ############################
+##################################################################
+############################ PADSSED  ############################
+##################################################################
+# 
+# Start write to address = 01, data = 30
+# 
+# Write transfer finished
+# 
+# Start read at address = 01
+# 
+# Read transfer finished 
+# 
+##################################################################
+############################ DATA: 30 ############################
+##################################################################
+############################ PADSSED  ############################
+##################################################################
+# 
+# Start read at address = 02
+# 
+# Read transfer finished 
+# 
+##################################################################
+############################ DATA: 03 ############################
+##################################################################
+############################ PADSSED  ############################
+##################################################################
+# 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEST PASS  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                  PPPPPPPPPPPPPPPPP        AAA                 SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS                 
+#                  P::::::::::::::::P      A:::A              SS:::::::::::::::S SS:::::::::::::::S                
+#                  P::::::PPPPPP:::::P    A:::::A            S:::::SSSSSS::::::SS:::::SSSSSS::::::S                
+#                  PP:::::P     P:::::P  A:::::::A           S:::::S     SSSSSSSS:::::S     SSSSSSS                
+#                    P::::P     P:::::P A:::::::::A          S:::::S            S:::::S                    
+#                    P::::P     P:::::PA:::::A:::::A         S:::::S            S:::::S                 
+#                    P:::::::::::::PPA:::::A   A:::::A         SS::::::SSSSS      SS::::::SSSSS                 
+#                    P::::PPPPPPPPP A:::::A     A:::::A          SSS::::::::SS      SSS::::::::SS                 
+#                    P::::P        A:::::AAAAAAAAA:::::A            SSSSSS::::S        SSSSSS::::S                
+#                    P::::P       A:::::::::::::::::::::A                S:::::S            S:::::S                
+#                    P::::P      A:::::AAAAAAAAAAAAA:::::A               S:::::S            S:::::S                
+#                  PP::::::PP   A:::::A             A:::::A  SSSSSSS     S:::::SSSSSSSS     S:::::S                
+#                  P::::::::P  A:::::A               A:::::A S::::::SSSSSS:::::SS::::::SSSSSS:::::S                
+#                  P::::::::P A:::::A                 A:::::AS:::::::::::::::SS S:::::::::::::::SS                 
+#                  PPPPPPPPPPAAAAAAA                   AAAAAAASSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS                
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 
+# ** Note: $finish    : ../testcase/timer_TC_03.v(48)
+#    Time: 31231 ns  Iteration: 0  Instance: /timer_TC_03

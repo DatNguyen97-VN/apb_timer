@@ -1,0 +1,1647 @@
+Coverage Report by file with details
+
+File: ../rtl/TIMER.v
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms            30        26         4      86.6
+
+================================Expression Details================================
+
+Expression Coverage for file ../rtl/TIMER.v --
+
+
+----------------Focused Expression View-----------------
+Line       192 Item    1     assign #1 S_TMR_UDF = inst0 & DOWN & udf_eq_00 & udf_eq_ff;
+Expression totals: 3 of 4 input terms covered = 75.0%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+        DOWN         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Matching input patterns       
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  inst0_0               { 0111 }                      
+  Row   2:          4  inst0_1               { 1111 }                      
+  Row   3:    ***0***  DOWN_0                { 1011 }                      
+  Row   4:          4  DOWN_1                { 1111 }                      
+  Row   5:          4  udf_eq_00_0           { 1101 }                      
+  Row   6:          4  udf_eq_00_1           { 1111 }                      
+  Row   7:          4  udf_eq_ff_0           { 1110 }                      
+  Row   8:          4  udf_eq_ff_1           { 1111 }                      
+
+NOTE:
+  * Order of matching input pattern values: {inst0,DOWN,udf_eq_00,udf_eq_ff}
+
+----------------Focused Expression View-----------------
+Line       196 Item    1     assign #1 S_TMR_OVF = inst0 & (~DOWN) & ovf_eq_00 & ovf_eq_ff;
+Expression totals: 3 of 4 input terms covered = 75.0%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+        DOWN         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Matching input patterns       
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          4  DOWN_0                { 0111 }                      
+  Row   2:    ***0***  DOWN_1                { 1111 }                      
+  Row   3:          1  inst0_0               { 0011 }                      
+  Row   4:          4  inst0_1               { 0111 }                      
+  Row   5:          8  ovf_eq_00_0           { 0101 }                      
+  Row   6:          4  ovf_eq_00_1           { 0111 }                      
+  Row   7:          4  ovf_eq_ff_0           { 0110 }                      
+  Row   8:          4  ovf_eq_ff_1           { 0111 }                      
+
+NOTE:
+  * Order of matching input pattern values: {DOWN,inst0,ovf_eq_00,ovf_eq_ff}
+
+
+
+
+----------------Focused Expression View-----------------
+Line       560 Item    1     assign sel_mux = psel & pwrite & penable & pready & sel_reg;
+Expression totals: 3 of 5 input terms covered = 60.0%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+        psel         N  '_0' not hit             Hit '_0'
+     penable         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Matching input patterns       
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  psel_0                { 01111 }                     
+  Row   2:         17  psel_1                { 11111 }                     
+  Row   3:         19  pwrite_0              { 10111 }                     
+  Row   4:         17  pwrite_1              { 11111 }                     
+  Row   5:    ***0***  penable_0             { 11011 }                     
+  Row   6:         17  penable_1             { 11111 }                     
+  Row   7:         17  pready_0              { 11101 }                     
+  Row   8:         17  pready_1              { 11111 }                     
+  Row   9:         30  sel_reg_0             { 11110 }                     
+ Row   10:         17  sel_reg_1             { 11111 }                     
+
+NOTE:
+  * Order of matching input pattern values: {psel,pwrite,penable,pready,sel_reg}
+
+
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    360       282        78      78.3
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../rtl/TIMER.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         61                                 TDR[7]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[6]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[5]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[4]           1           3           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[3]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[2]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[1]           1           3           0*          0*          0*          0*    2-STATE      100.00 
+         61                                 TDR[0]           1           3           0*          0*          0*          0*    2-STATE      100.00 
+         62                                 TCR[7]           1           3           0*          0*          0*          0*    2-STATE      100.00 
+         62                                 TCR[6]           0           0           0           0           0           0           3        0.00 
+         62                                 TCR[5]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+         62                                 TCR[4]           7          11           0*          0*          0*          0*    2-STATE      100.00 
+         62                                 TCR[3]           0           0           0           0           0           0           3        0.00 
+         62                                 TCR[2]           0           0           0           0           0           0           3        0.00 
+         62                                 TCR[1]           3           4           0*          0*          0*          0*    2-STATE      100.00 
+         62                                 TCR[0]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[7]           8           9           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[6]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[5]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[4]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[3]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[2]          10          11           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[1]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+         63                                 CNT[0]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+         64                              S_TMR_UDF           4           4           0*          0*          0*          0*    2-STATE      100.00 
+         65                              S_TMR_OVF           3           4           0*          0*          0*          0*    2-STATE      100.00 
+         66                                clk_div          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        171                                  inst0           7           9           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[7]           7           9           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[6]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[5]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[4]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[3]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[2]          10          11           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[1]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        172                             lastCNT[0]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        173                              udf_eq_00          12           8           0*          0*          0*          0*    2-STATE      100.00 
+        174                              udf_eq_ff           8           9           0*          0*          0*          0*    2-STATE      100.00 
+        175                              ovf_eq_00           7           9           0*          0*          0*          0*    2-STATE      100.00 
+        176                              ovf_eq_ff          12           9           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[7]           8           9           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[6]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[5]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[4]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[3]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[2]          10          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[1]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        220                          next_count[0]          11          12           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[7]           8           9           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[6]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[5]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[4]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[3]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[2]          10          11           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[1]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        220                       initial_value[0]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[7]           8           9           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[6]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[5]           9          10           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[4]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[3]           9          11           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[2]          10          11           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[1]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        221                                 sum[0]          11          12           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[7]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[6]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[5]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[4]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[3]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[2]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[1]           3           5           0*          0*          0*          0*    2-STATE      100.00 
+        222                                 MOD[0]           7          11           0*          0*          0*          0*    2-STATE      100.00 
+        223                                  enCLK          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        286                                 not_in          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        308                                    in3          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        308                                    in2          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        308                                    in1          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        308                                    in0          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        309                                     q3          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        309                                     q2          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        309                                     q1          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        309                                     q0          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[7]          15          18           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[6]          18          20           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[5]          18          20           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[4]          18          22           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[3]          18          22           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[2]          20          22           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[1]          20          24           0*          0*          0*          0*    2-STATE      100.00 
+        344                                   D[0]          85          89           0*          0*          0*          0*    2-STATE      100.00 
+        393                                 TSR[1]           1           4           0*          0*          0*          0*    2-STATE      100.00 
+        393                                 TSR[0]           1           3           0*          0*          0*          0*    2-STATE      100.00 
+        394                             TSR_buf[7]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[6]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[5]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[4]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[3]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[2]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[1]           0           0           0           0           0           0           3        0.00 
+        394                             TSR_buf[0]           0           0           0           0           0           0           3        0.00 
+        395                             sel_reg[2]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+        395                             sel_reg[1]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        395                             sel_reg[0]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        396                                    err           1           1           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[7]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[6]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[5]           6           5           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[4]          12           8           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[3]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[2]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[1]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+        397                            RBPWDATA[0]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+        398                                TSR_UDF           0           0           0           0           0           0           3        0.00 
+        398                                TSR_OVF           0           0           0           0           0           0           3        0.00 
+        523                          select_reg[2]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+        523                          select_reg[1]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        523                          select_reg[0]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[7]           2           5           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[6]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[5]           4           7           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[4]           8          14           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[3]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[2]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[1]           4           7           0*          0*          0*          0*    2-STATE      100.00 
+        555                                 out[0]           5           7           0*          0*          0*          0*    2-STATE      100.00 
+        557                                sel_mux          17          17           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[7]           2           5           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[6]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[5]           4           7           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[4]           8          14           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[3]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[2]           1           2           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[1]           4           7           0*          0*          0*          0*    2-STATE      100.00 
+        558                                 bus[0]           5           7           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[7]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[6]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[5]           5           6           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[4]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[3]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[2]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[1]           4           8           0*          0*          0*          0*    2-STATE      100.00 
+        594                                 out[0]           8           8           0*          0*          0*          0*    2-STATE      100.00 
+        596                                 ready2           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        596                                 ready1          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        596                                     en          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        597                               count[2]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        597                               count[1]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        597                               count[0]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        648                                 pready          13          13           0*          0*          0*          0*    2-STATE      100.00 
+        650                                  ready           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        652                               count[2]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        652                               count[1]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        652                               count[0]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+        689                                pslverr           1           1           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        154 
+Toggled Node Count   =        141 
+Untoggled Node Count =         13 
+
+Toggle Coverage      =       78.3% (282 of 360 bins)
+
+File: ../testbench/timer_testbench.v
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     86        50        36      58.1
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testbench/timer_testbench.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                              sys_reset           2          13           0*          0*          0*          0*    2-STATE      100.00 
+         25                                sys_clk          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         26                           cpu_paddr[7]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[6]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[5]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[4]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[3]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[2]           0           0           0           0           0           0           3        0.00 
+         26                           cpu_paddr[1]           5           5           0*          0*          0*          0*    2-STATE      100.00 
+         26                           cpu_paddr[0]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         27                             cpu_pwrite          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         28                               cpu_psel          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         29                            cpu_penable          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[7]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[6]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[5]           6           5           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[4]          12           8           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[3]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[2]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[1]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+         30                          cpu_pwdata[0]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[7]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[6]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[5]           5           6           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[4]          10          12           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[3]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[2]           2           2           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[1]           4           8           0*          0*          0*          0*    2-STATE      100.00 
+         31                          cpu_prdata[0]           8           8           0*          0*          0*          0*    2-STATE      100.00 
+         32                            cpu_pslverr           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         32                             cpu_pready          13          13           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         31 
+Toggled Node Count   =         25 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =       58.1% (50 of 86 bins)
+
+File: ../testcase/timer_TC_01.v
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     24         0        24       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_01.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                         err_flg_TDR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TDR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_CNT[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_CNT[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          4 
+Toggled Node Count   =          0 
+Untoggled Node Count =          4 
+
+Toggle Coverage      =        0.0% (0 of 24 bins)
+
+File: ../testcase/timer_TC_02.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           72        65         7      90.2
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_02.v --
+
+    124             1                $display ("Data = %h, Expected = %h\n", data, CNT);
+    125             1                $display ("##################################################################");
+    126             1                $display ("##################################################################");
+    127             1                $display ("########################### FAILED ###############################");
+    128             1                $display ("##################################################################");
+    129             1                $display ("##################################################################\n");
+    130             1                err_flg = 2'b10;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_02.v --
+
+------------------------------------IF Branch------------------------------------
+    115                                        4     Count coming in to IF
+    115             1                          4              if (data == CNT) begin
+    123             1                    ***0***              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    244        41       203      16.8
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_02.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_clk8[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk8[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[0]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[1]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[0]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[1]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[3]           0           1           0           0           0           0           3       16.67 
+         27                                cnt8[2]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt8[1]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt8[0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt4[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[5]           0           1           0           0           0           0           3       16.67 
+         27                                cnt4[4]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt4[3]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt4[2]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt4[1]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt4[0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[6]           0           1           0           0           0           0           3       16.67 
+         27                                cnt2[5]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[4]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[3]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[2]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[1]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                                cnt2[0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                               cnt16[7]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[6]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[5]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[4]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[3]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[2]           0           1           0           0           0           0           3       16.67 
+         27                               cnt16[1]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         27                               cnt16[0]           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         28                                  step8           1           1           0*          0*          0*          0*    2-STATE      100.00 
+         28                                  step4           0           1           0           0           0           0           3       16.67 
+         28                                  step2           0           1           0           0           0           0           3       16.67 
+         28                                 step16           0           1           0           0           0           0           3       16.67 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         52 
+Toggled Node Count   =         17 
+Untoggled Node Count =         35 
+
+Toggle Coverage      =       16.8% (41 of 244 bins)
+
+File: ../testcase/timer_TC_03.v
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     48         0        48       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_03.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_TSR2[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_TSR2[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_TSR1[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_TSR1[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR1[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR1[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          8 
+Toggled Node Count   =          0 
+Untoggled Node Count =          8 
+
+Toggle Coverage      =        0.0% (0 of 48 bins)
+
+File: ../testcase/timer_TC_04.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           27        22         5      81.4
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_04.v --
+
+    49              1                   $display (" Enable function of TCNT is not active when EN is HIGH.\n");
+    50              1                   err_flg_TCNT1[1] = 1;
+    51              1                   temp = 8'h00;
+    60              1                   $display (" Enable function of TCNT is not active when EN is LOW.\n");
+    61              1                   err_flg_TCNT2[1] = 1;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         4         2         2      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_04.v --
+
+------------------------------------IF Branch------------------------------------
+    44                                         1     Count coming in to IF
+    44              1                          1                 if (tb.DUT.CNT) begin
+    48              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    56                                         1     Count coming in to IF
+    56              1                          1                 if (tb.DUT.CNT == temp) begin
+    59              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     96         0        96       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_04.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                       err_flg_TCNT2[1]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_TCNT2[0]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_TCNT1[1]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_TCNT1[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR1[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR1[0]           0           0           0           0           0           0           3        0.00 
+         27                                temp[7]           0           0           0           0           0           0           3        0.00 
+         27                                temp[6]           0           0           0           0           0           0           3        0.00 
+         27                                temp[5]           0           0           0           0           0           0           3        0.00 
+         27                                temp[4]           0           0           0           0           0           0           3        0.00 
+         27                                temp[3]           0           0           0           0           0           0           3        0.00 
+         27                                temp[2]           0           0           0           0           0           0           3        0.00 
+         27                                temp[1]           0           0           0           0           0           0           3        0.00 
+         27                                temp[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         16 
+Toggled Node Count   =          0 
+Untoggled Node Count =         16 
+
+Toggle Coverage      =        0.0% (0 of 96 bins)
+
+File: ../testcase/timer_TC_05.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           78        59        19      75.6
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_05.v --
+
+    44              1                   $display ("##################################################################\n");
+    45              1                   $display ("TCNT is uncorrect when count at PCLK/2.\n");
+    46              1                   $display ("##################################################################\n");
+    63              1                   $display ("##################################################################\n");
+    64              1                   $display ("TCNT is uncorrect when count at PCLK/4.\n");
+    65              1                   $display ("##################################################################\n");
+    82              1                   $display ("##################################################################\n");
+    83              1                   $display ("TCNT is uncorrect when count at PCLK/8.\n");
+    84              1                   $display ("##################################################################\n");
+    101             1                   $display ("##################################################################\n");
+    102             1                   $display ("TCNT is uncorrect when count at PCLK/16.\n");
+    103             1                   $display ("##################################################################\n");
+    136             1                $display ("Data = %h, Expected = %h\n", data, CNT);
+    137             1                $display ("##################################################################");
+    138             1                $display ("##################################################################");
+    139             1                $display ("########################### FAILED ###############################");
+    140             1                $display ("##################################################################");
+    141             1                $display ("##################################################################\n");
+    142             1                err_flg = 2'b10;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        10         5         5      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_05.v --
+
+------------------------------------IF Branch------------------------------------
+    43                                         1     Count coming in to IF
+    43              1                    ***0***                 if (err_flg_clk2[1]) begin
+    47              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    62                                         1     Count coming in to IF
+    62              1                    ***0***                 if (err_flg_clk4[1]) begin
+    66              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    81                                         1     Count coming in to IF
+    81              1                    ***0***                 if (err_flg_clk8[1]) begin
+    85              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    100                                        1     Count coming in to IF
+    100             1                    ***0***                 if (err_flg_clk16[1]) begin
+    104             1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    127                                        4     Count coming in to IF
+    127             1                          4              if (data == CNT) begin
+    135             1                    ***0***              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    288         0       288       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_05.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_clk8[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk8[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[0]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[1]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[0]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[1]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[0]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[7]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[6]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[5]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[4]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[3]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[2]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[1]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         48 
+Toggled Node Count   =          0 
+Untoggled Node Count =         48 
+
+Toggle Coverage      =        0.0% (0 of 288 bins)
+
+File: ../testcase/timer_TC_06.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           78        59        19      75.6
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_06.v --
+
+    44              1                   $display ("##################################################################\n");
+    45              1                   $display ("TCNT is uncorrect when count at PCLK/2.\n");
+    46              1                   $display ("##################################################################\n");
+    63              1                   $display ("##################################################################\n");
+    64              1                   $display ("TCNT is uncorrect when count at PCLK/4.\n");
+    65              1                   $display ("##################################################################\n");
+    82              1                   $display ("##################################################################\n");
+    83              1                   $display ("TCNT is uncorrect when count at PCLK/8.\n");
+    84              1                   $display ("##################################################################\n");
+    101             1                   $display ("##################################################################\n");
+    102             1                   $display ("TCNT is uncorrect when count at PCLK/16.\n");
+    103             1                   $display ("##################################################################\n");
+    136             1                $display ("Data = %h, Expected = %h\n", data, CNT);
+    137             1                $display ("##################################################################");
+    138             1                $display ("##################################################################");
+    139             1                $display ("########################### FAILED ###############################");
+    140             1                $display ("##################################################################");
+    141             1                $display ("##################################################################\n");
+    142             1                err_flg = 2'b10;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        10         5         5      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_06.v --
+
+------------------------------------IF Branch------------------------------------
+    43                                         1     Count coming in to IF
+    43              1                    ***0***                 if (err_flg_clk2[1]) begin
+    47              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    62                                         1     Count coming in to IF
+    62              1                    ***0***                 if (err_flg_clk4[1]) begin
+    66              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    81                                         1     Count coming in to IF
+    81              1                    ***0***                 if (err_flg_clk8[1]) begin
+    85              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    100                                        1     Count coming in to IF
+    100             1                    ***0***                 if (err_flg_clk16[1]) begin
+    104             1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    127                                        4     Count coming in to IF
+    127             1                          4              if (data == CNT) begin
+    135             1                    ***0***              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    288         0       288       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_06.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_clk8[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk8[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk4[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[0]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[1]           0           0           0           0           0           0           3        0.00 
+         25                       err_flg_clk16[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR8[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR4[0]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[1]           0           0           0           0           0           0           3        0.00 
+         26                        err_flg_TCR2[0]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[1]           0           0           0           0           0           0           3        0.00 
+         26                       err_flg_TCR16[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt8[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt4[0]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[7]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[6]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[5]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[4]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[3]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[2]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[1]           0           0           0           0           0           0           3        0.00 
+         27                                cnt2[0]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[7]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[6]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[5]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[4]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[3]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[2]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[1]           0           0           0           0           0           0           3        0.00 
+         27                               cnt16[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         48 
+Toggled Node Count   =          0 
+Untoggled Node Count =         48 
+
+Toggle Coverage      =        0.0% (0 of 288 bins)
+
+File: ../testcase/timer_TC_07.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           51        39        12      76.4
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_07.v --
+
+    43              1                   $display ("##################################################################");
+    44              1                   $display (" Timer counter underflow when counter 8’h00 down               #");
+    45              1                   $display (" to 8’hff is not active.                                       #");
+    46              1                   $display ("##################################################################\n");
+    61              1                   $display ("##################################################################");
+    62              1                   $display (" Timer counter overflow when counter 8'hFF up                  #");
+    63              1                   $display (" to 8'h00 is not active.                                       #");
+    64              1                   $display ("##################################################################\n");
+    76              1                   $display ("##################################################################");
+    77              1                   $display ("This reserved bit of TSR[7:2], TCR[6] and TCR[3:2] is not clear#");
+    78              1                   $display (" by software, TSR[1] is not set by hardware.                   #");
+    79              1                   $display ("##################################################################\n");
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         6         3         3      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_07.v --
+
+------------------------------------IF Branch------------------------------------
+    42                                         1     Count coming in to IF
+    42              1                    ***0***                 if (err_flg_UDF[1]) begin
+    47              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    60                                         1     Count coming in to IF
+    60              1                    ***0***                 if (err_flg_OVF[1]) begin
+    65              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    75                                         1     Count coming in to IF
+    75              1                    ***0***                 if (err_flg_TCR[1] | err_flg_TSR[1] | err_flg_UDF[1] | err_flg_OVF[1] | err_flg_CLR[1]) begin
+    80              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              5         0         5       0.0
+
+================================Condition Details================================
+
+Condition Coverage for file ../testcase/timer_TC_07.v --
+
+----------------Focused Condition View-------------------
+Line       75 Item    1             if (err_flg_TCR[1] | err_flg_TSR[1] | err_flg_UDF[1] | err_flg_OVF[1] | err_flg_CLR[1]) begin
+Condition totals: 0 of 5 input terms covered = 0.0%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  err_flg_TCR[1]         N  No hits                  Hit '_0' and '_1'
+  err_flg_TSR[1]         N  No hits                  Hit '_0' and '_1'
+  err_flg_UDF[1]         N  No hits                  Hit '_0' and '_1'
+  err_flg_OVF[1]         N  No hits                  Hit '_0' and '_1'
+  err_flg_CLR[1]         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Matching input patterns       
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  err_flg_TCR[1]_0      { 00000 }                     
+  Row   2:    ***0***  err_flg_TCR[1]_1      { 10000 }                     
+  Row   3:    ***0***  err_flg_TSR[1]_0      { 00000 }                     
+  Row   4:    ***0***  err_flg_TSR[1]_1      { 01000 }                     
+  Row   5:    ***0***  err_flg_UDF[1]_0      { 00000 }                     
+  Row   6:    ***0***  err_flg_UDF[1]_1      { 00100 }                     
+  Row   7:    ***0***  err_flg_OVF[1]_0      { 00000 }                     
+  Row   8:    ***0***  err_flg_OVF[1]_1      { 00010 }                     
+  Row   9:    ***0***  err_flg_CLR[1]_0      { 00000 }                     
+ Row   10:    ***0***  err_flg_CLR[1]_1      { 00001 }                     
+
+NOTE:
+  * Order of matching input pattern values: {err_flg_TCR[1],err_flg_TSR[1],err_flg_UDF[1],err_flg_OVF[1],err_flg_CLR[1]}
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     60         0        60       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_07.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                         err_flg_UDF[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_UDF[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TSR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TSR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_OVF[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_OVF[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_CLR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_CLR[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         10 
+Toggled Node Count   =          0 
+Untoggled Node Count =         10 
+
+Toggle Coverage      =        0.0% (0 of 60 bins)
+
+File: ../testcase/timer_TC_08.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           30        26         4      86.6
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_08.v --
+
+    53              1                   $display ("##################################################################");
+    54              1                   $display (" Timer counter not overflow when counter 8'hFF to 8'h00       ##");
+    55              1                   $display (" is uncorrect.                                                ##");
+    56              1                   $display ("##################################################################\n");
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_08.v --
+
+------------------------------------IF Branch------------------------------------
+    52                                         1     Count coming in to IF
+    52              1                    ***0***                 if (err_flg_TSR[1]) begin
+    57              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     36         0        36       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_08.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                         err_flg_TSR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TSR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TDR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TDR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          6 
+Toggled Node Count   =          0 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =        0.0% (0 of 36 bins)
+
+File: ../testcase/timer_TC_09.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           30        26         4      86.6
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_09.v --
+
+    53              1                   $display ("##################################################################");
+    54              1                   $display (" Timer counter underflow when counter 8'h00 down 8'hFF        ##");
+    55              1                   $display (" is uncorrect.                                                ##");
+    56              1                   $display ("##################################################################\n");
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_09.v --
+
+------------------------------------IF Branch------------------------------------
+    52                                         1     Count coming in to IF
+    52              1                    ***0***                 if (err_flg_TSR[1]) begin
+    57              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     36         0        36       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_09.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                         err_flg_TSR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TSR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TDR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TDR[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          6 
+Toggled Node Count   =          0 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =        0.0% (0 of 36 bins)
+
+File: ../testcase/timer_TC_10.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           35        29         6      82.8
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_10.v --
+
+    58              1                    $display ("##################################################################");
+    59              1                    $display ("######################## DATA: %h, EXPECTED: %h ##################", tb.DUT.CNT, 8'hFF);
+    60              1                    $display ("##################################################################");
+    61              1                    $display ("############################ FAILED ##############################");
+    62              1                    $display ("##################################################################\n");
+    63              1                    err_flg_TCNT[1] = 1'b1;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_10.v --
+
+------------------------------------IF Branch------------------------------------
+    50                                         1     Count coming in to IF
+    50              1                          1                 if (8'hFF == tb.DUT.CNT) begin
+    57              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     72         0        72       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_10.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_TCNT[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_TCNT[0]           0           0           0           0           0           0           3        0.00 
+         26                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         26                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+         27                                temp[7]           0           0           0           0           0           0           3        0.00 
+         27                                temp[6]           0           0           0           0           0           0           3        0.00 
+         27                                temp[5]           0           0           0           0           0           0           3        0.00 
+         27                                temp[4]           0           0           0           0           0           0           3        0.00 
+         27                                temp[3]           0           0           0           0           0           0           3        0.00 
+         27                                temp[2]           0           0           0           0           0           0           3        0.00 
+         27                                temp[1]           0           0           0           0           0           0           3        0.00 
+         27                                temp[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         12 
+Toggled Node Count   =          0 
+Untoggled Node Count =         12 
+
+Toggle Coverage      =        0.0% (0 of 72 bins)
+
+File: ../testcase/timer_TC_11.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           35        29         6      82.8
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_11.v --
+
+    58              1                    $display ("##################################################################");
+    59              1                    $display ("######################## DATA: %h, EXPECTED: %h ##################", tb.DUT.CNT, 8'h00);
+    60              1                    $display ("##################################################################");
+    61              1                    $display ("############################ FAILED ##############################");
+    62              1                    $display ("##################################################################\n");
+    63              1                    err_flg_TCNT[1] = 1'b1;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_11.v --
+
+------------------------------------IF Branch------------------------------------
+    50                                         1     Count coming in to IF
+    50              1                          1                 if (8'h00 == tb.DUT.CNT) begin
+    57              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     72         0        72       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_11.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_TCNT[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_TCNT[0]           0           0           0           0           0           0           3        0.00 
+         26                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         26                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+         27                                temp[7]           0           0           0           0           0           0           3        0.00 
+         27                                temp[6]           0           0           0           0           0           0           3        0.00 
+         27                                temp[5]           0           0           0           0           0           0           3        0.00 
+         27                                temp[4]           0           0           0           0           0           0           3        0.00 
+         27                                temp[3]           0           0           0           0           0           0           3        0.00 
+         27                                temp[2]           0           0           0           0           0           0           3        0.00 
+         27                                temp[1]           0           0           0           0           0           0           3        0.00 
+         27                                temp[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         12 
+Toggled Node Count   =          0 
+Untoggled Node Count =         12 
+
+Toggle Coverage      =        0.0% (0 of 72 bins)
+
+File: ../testcase/timer_TC_12.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           50        37        13      74.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_12.v --
+
+    42              1                   $display ("##################################################################\n");
+    43              1                   $display ("Before RESET TCNT is uncorrect when count at PCLK/2.\n");
+    44              1                   $display ("##################################################################\n");
+    61              1                   $display ("##################################################################\n");
+    62              1                   $display ("After RESET TCNT is uncorrect when count at PCLK/2.\n");
+    63              1                   $display ("##################################################################\n");
+    95              1                $display ("Data = %h, Expected = %h\n", data, CNT);
+    96              1                $display ("##################################################################");
+    97              1                $display ("##################################################################");
+    98              1                $display ("########################### FAILED ###############################");
+    99              1                $display ("##################################################################");
+    100             1                $display ("##################################################################\n");
+    101             1                err_flg = 2'b10;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         6         3         3      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_12.v --
+
+------------------------------------IF Branch------------------------------------
+    41                                         1     Count coming in to IF
+    41              1                    ***0***                 if (err_flg_clk[1]) begin
+    45              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    60                                         1     Count coming in to IF
+    60              1                    ***0***                 if (err_flg_clk[1]) begin
+    64              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    86                                         1     Count coming in to IF
+    86              1                          1              if (data == CNT) begin
+    94              1                    ***0***              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     24         0        24       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_12.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                         err_flg_clk[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_clk[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          4 
+Toggled Node Count   =          0 
+Untoggled Node Count =          4 
+
+Toggle Coverage      =        0.0% (0 of 24 bins)
+
+File: ../testcase/timer_TC_13.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           50        37        13      74.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../testcase/timer_TC_13.v --
+
+    46              1                   $display ("##################################################################\n");
+    47              1                   $display ("Before RESET TCNT is correct when count at PCLK/2.\n");
+    48              1                   $display ("##################################################################\n");
+    61              1                   $display ("##################################################################\n");
+    62              1                   $display ("After RESET TCNT is uncorrect when count at PCLK/2.\n");
+    63              1                   $display ("##################################################################\n");
+    87              1                $display ("Data = %h, Expected = %h\n", data, CNT);
+    88              1                $display ("##################################################################");
+    89              1                $display ("##################################################################");
+    90              1                $display ("############################ PADSSED #############################");
+    91              1                $display ("##################################################################");
+    92              1                $display ("##################################################################\n");
+    93              1                err_flg = 2'b01;
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         6         3         3      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../testcase/timer_TC_13.v --
+
+------------------------------------IF Branch------------------------------------
+    41                                         1     Count coming in to IF
+    41              1                          1                 if (err_flg_clk1[1]) begin
+    45              1                    ***0***                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    60                                         1     Count coming in to IF
+    60              1                    ***0***                 if (err_flg_clk2[1]) begin
+    64              1                          1                 end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    86                                         1     Count coming in to IF
+    86              1                    ***0***              if (data == CNT) begin
+    94              1                          1              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     36         0        36       0.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../testcase/timer_TC_13.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         25                        err_flg_clk2[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk2[0]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk1[1]           0           0           0           0           0           0           3        0.00 
+         25                        err_flg_clk1[0]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[1]           0           0           0           0           0           0           3        0.00 
+         25                         err_flg_TCR[0]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          6 
+Toggled Node Count   =          0 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =        0.0% (0 of 36 bins)
+
+File: ../vip/timer_CPU_Model.v
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          134        77        57      57.4
+
+================================Statement Details================================
+
+Statement Coverage for file ../vip/timer_CPU_Model.v --
+
+    102             1               $display ("##################################################################");
+    103             1               $display ("######################## DATA: %h, EXPECTED: %h ##################", cpu_prdata, data);
+    104             1               $display ("##################################################################");
+    105             1               $display ("############################ FAILED ##############################");
+    106             1               $display ("##################################################################\n");
+    107             1               err_flg[0] = 1'b1;
+    109             1               $display ("##################################################################");
+    110             1               $display ("##################################################################");
+    111             1               $display ("######################## DATA: %h, EXPECTED: %h ##################", cpu_prdata, data);
+    112             1               $display ("########################## FAILED READ ###########################");
+    113             1               $display ("##################################################################");
+    114             1               $display ("##################################################################\n");
+    115             1               err_flg[1] = 1'b1;
+    125             1               $display ("##################################################################");
+    126             1               $display ("##################################################################");
+    127             1               $display ("############################ PADSSED #############################");
+    128             1               $display ("##################################################################");
+    129             1               $display ("##################################################################\n");
+    130             1               err_flg[0] = 1'b1;
+    132             1               $display ("##################################################################");
+    133             1               $display ("##################################################################");
+    134             1               $display ("############################ FAILED  #############################");
+    135             1               $display ("##################################################################");
+    136             1               $display ("##################################################################\n");
+    137             1               err_flg[1] = 1'b1;
+    147             1               8'h0 : CHECK(data, A, err_flg);
+    148             1               8'h1 : CHECK(data, B, err_flg);
+    149             1               8'h2 : CHECK(data, C, err_flg);
+    150             1               8'h3 : CHECK(data, D, err_flg);
+    151             1               8'h4 : CHECK(data, E, err_flg);
+    152             1               8'h5 : CHECK(data, F, err_flg);
+    153             1               8'h6 : CHECK(data, G, err_flg);
+    154             1               8'h7 : CHECK(data, H, err_flg);
+    156             1                      $display ("##################################################################");
+    157             1                      $display ("##################################################################");
+    158             1                      $display ("######################### ERROR ADDRESS ##########################");
+    159             1                      $display ("##################################################################");
+    160             1                      $display ("##################################################################\n");
+    181             1                $display ("Data = %h, Expected = %h\n", data_TDR, CNT);
+    182             1                $display ("##################################################################");
+    183             1                $display ("##################################################################");
+    184             1                $display ("########################### FAILED ###############################");
+    185             1                $display ("##################################################################");
+    186             1                $display ("##################################################################\n");
+    187             1                err_flg = 2'b10;
+    198             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    199             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~ TEST FAIL  ~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    200             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    201             1               $display("~~~~~~~~~~~~~~~~ #####     ##     #####  #      ~~~~~~~~~~~~~~~~");
+    202             1               $display("~~~~~~~~~~~~~~~~ #        #  #      #    #      ~~~~~~~~~~~~~~~~");
+    203             1               $display("~~~~~~~~~~~~~~~~ #       #    #     #    #      ~~~~~~~~~~~~~~~~");
+    204             1               $display("~~~~~~~~~~~~~~~~ #####   ######     #    #      ~~~~~~~~~~~~~~~~");
+    205             1               $display("~~~~~~~~~~~~~~~~ #       #    #     #    #      ~~~~~~~~~~~~~~~~");
+    206             1               $display("~~~~~~~~~~~~~~~~ #       #    #   #####  ###### ~~~~~~~~~~~~~~~~");
+    207             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    208             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    209             1               $display("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        19         3        16      15.7
+
+================================Branch Details================================
+
+Branch Coverage for file ../vip/timer_CPU_Model.v --
+
+------------------------------------IF Branch------------------------------------
+    94                                        43     Count coming in to IF
+    94              1                         43             if (data == cpu_prdata) begin
+    101             1                    ***0***             end else if((data != cpu_prdata) && (address > 8'h07)) begin
+    108             1                    ***0***             end else begin
+Branch totals: 1 hit of 3 branches = 33.3%
+
+------------------------------------IF Branch------------------------------------
+    124                                  ***0***     Count coming in to IF
+    124             1                    ***0***             if (data == out) begin
+    131             1                    ***0***             end else begin
+Branch totals: 0 hits of 2 branches = 0.0%
+
+------------------------------------CASE Branch------------------------------------
+    146                                  ***0***     Count coming in to CASE
+    147             1                    ***0***               8'h0 : CHECK(data, A, err_flg);
+    148             1                    ***0***               8'h1 : CHECK(data, B, err_flg);
+    149             1                    ***0***               8'h2 : CHECK(data, C, err_flg);
+    150             1                    ***0***               8'h3 : CHECK(data, D, err_flg);
+    151             1                    ***0***               8'h4 : CHECK(data, E, err_flg);
+    152             1                    ***0***               8'h5 : CHECK(data, F, err_flg);
+    153             1                    ***0***               8'h6 : CHECK(data, G, err_flg);
+    154             1                    ***0***               8'h7 : CHECK(data, H, err_flg);
+    155             1                    ***0***               default: begin
+Branch totals: 0 hits of 9 branches = 0.0%
+
+------------------------------------IF Branch------------------------------------
+    172                                        1     Count coming in to IF
+    172             1                          1              if (data_TDR == CNT) begin
+    180             1                    ***0***              end else begin
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    197                                       13     Count coming in to IF
+    197             1                    ***0***               if (err_flg[1]) begin
+    210             1                         13             end else if (err_flg[0]) begin
+                                         ***0***     All False Count
+Branch totals: 1 hit of 3 branches = 33.3%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              2         0         2       0.0
+
+================================Condition Details================================
+
+Condition Coverage for file ../vip/timer_CPU_Model.v --
+
+----------------Focused Condition View-------------------
+Line       101 Item    1         end else if((data != cpu_prdata) && (address > 8'h07)) begin
+Condition totals: 0 of 2 input terms covered = 0.0%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (data != cpu_prdata)         N  No hits                  Hit '_0' and '_1'
+         (address > 7)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Matching input patterns       
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (data != cpu_prdata)_0  { 0- }                        
+  Row   2:    ***0***  (data != cpu_prdata)_1  { 11 }                        
+  Row   3:    ***0***  (address > 7)_0         { 10 }                        
+  Row   4:    ***0***  (address > 7)_1         { 11 }                        
+
+NOTE:
+  * Order of matching input pattern values: {(data != cpu_prdata),(address > 7)}
+
+
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     62        26        36      41.9
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../vip/timer_CPU_Model.v --
+
+       Line                                   Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+--------------------------------------------------------------------------------------------------------------------------------------------------
+         22                                sys_clk          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         23                              sys_reset           2          13           0*          0*          0*          0*    2-STATE      100.00 
+         26                             cpu_pwrite          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         26                               cpu_psel          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         26                            cpu_penable          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         27                           cpu_paddr[7]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[6]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[5]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[4]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[3]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[2]           0           0           0           0           0           0           3        0.00 
+         27                           cpu_paddr[1]           5           5           0*          0*          0*          0*    2-STATE      100.00 
+         27                           cpu_paddr[0]          13          13           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[7]           4           4           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[6]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[5]           6           5           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[4]          12           8           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[3]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[2]           3           2           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[1]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+         28                          cpu_pwdata[0]           7           5           0*          0*          0*          0*    2-STATE      100.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         19 
+Toggled Node Count   =         13 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =       41.9% (26 of 62 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 44.9%
+
